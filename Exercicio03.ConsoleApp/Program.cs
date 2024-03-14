@@ -1,13 +1,13 @@
-﻿namespace Exercicio04.ConsoleApp
+﻿namespace Exercicio03.ConsoleApp
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite os valores das seguintes medidas de um cilindro:");
+            Console.WriteLine("Digite as seguintes medidas do cilindro:");
             Console.WriteLine("Raio: ");
             double raio = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Altura: ");
+            Console.WriteLine("Altura");
             double altura = Convert.ToDouble(Console.ReadLine());
 
             double volume = Math.PI * Math.Pow(raio, 2) * altura;
