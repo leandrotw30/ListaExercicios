@@ -4,18 +4,27 @@
     {
         static void Main(string[] args)
         {
-            var notas = new List<decimal>();
+            var notas = new List<double>();
 
             Console.WriteLine("Digite as notas do aluno ou digite 'S' para sair");
-            Console.WriteLine("Digite a nota 1 do aluno: ");
+            Console.WriteLine("Digite a primeira nota do aluno: ");
             var notaDigitada = Console.ReadLine();
-           
-            while (string.IsNullOrEmpty(notaDigitada) && !notaDigitada.Equals("S",StringComparison.InvariantCultureIgnoreCase))
+
+            while (!string.IsNullOrEmpty(notaDigitada) && !notaDigitada.Equals("S", StringComparison.InvariantCultureIgnoreCase))
             {
-                decimal notaConvertida = Convert.ToDecimal(notaDigitada);
+                double notaConvertida = Convert.ToDouble(notaDigitada);
                 notas.Add(notaConvertida);
+                Console.WriteLine("Digite a próxima nota do aluno");
+                notaDigitada = Console.ReadLine();
             }
-        }
+            double notasSomadas = 0;
+            foreach (var nota in notas)
+            {
+                notasSomadas = notasSomadas + (1 / nota);
+            }
+            double resultado = notas.Count / notasSomadas;
+
+            Console.WriteLine("A média harmônica deste aluno é: " + resultado);
+        }       
     }
-}//a segunda linha dar o comando para o usuario dar a nota um do aluno, dar readline para ler a nota
-// arrumar nullvalidação antes de notaDigitada no while
+}
