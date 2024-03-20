@@ -1,20 +1,37 @@
-﻿namespace Exercicio04.ConsoleApp
+﻿using System.ComponentModel;
+
+namespace Exercicio04.ConsoleApp
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite a quilometragem inicial do percurso do veículo: ");
-            decimal quilometragemInicial = Convert.ToDecimal(Console.ReadLine());
-            Console.WriteLine("Digite a quilometragem final do percurso do veículo: ");
-            decimal quilometragemFinal = Convert.ToDecimal(Console.ReadLine());
-            Console.WriteLine("Digite o consumo de combustível (em Litros): ");
-            decimal consumoCombustivel = Convert.ToDecimal(Console.ReadLine());
+            decimal quilometragemInicial = ObterDadosUsuario("Digite a quilometragem inicial do percurso do veículo: ");
+            decimal quilometragemFinal = ObterDadosUsuario("Digite a quilometragem final do percurso do veículo: ");
+            decimal consumoCombustivel = ObterDadosUsuario("Digite o consumo de combustível(em Litros): ");
 
-            decimal distanciaPercorrida = quilometragemFinal - quilometragemInicial;
+            decimal distanciaPercorrida = CalculoDistanciaPercorrida(quilometragemInicial, quilometragemFinal);
 
-            decimal consumoPorKm = consumoCombustivel / distanciaPercorrida;
+            decimal consumoPorKm = CalculoConsumoPorKm(consumoCombustivel, distanciaPercorrida);
 
+            MostrarResultado(consumoPorKm);
+        }
+        private static decimal ObterDadosUsuario(string texto)
+        {
+            Console.WriteLine(texto);
+            decimal valor = Convert.ToDecimal(Console.ReadLine());
+            return valor;
+        }
+        static decimal CalculoDistanciaPercorrida(decimal quilometragemInicial, decimal quilometragemFinal)
+        {
+            return quilometragemFinal - quilometragemInicial;
+        }
+        static decimal CalculoConsumoPorKm(decimal consumoCombustivel, decimal distanciaPercorrida)
+        {
+            return consumoCombustivel / distanciaPercorrida;
+        }
+        static void MostrarResultado(decimal consumoPorKm)
+        {
             Console.WriteLine("O consumo de combustível por Km é: " + consumoPorKm);
         }
     }
