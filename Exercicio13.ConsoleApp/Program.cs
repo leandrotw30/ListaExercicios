@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            double precoPaozinhos = 0.12;
-            double precoBroas = 1.50;
+            const double precoPaozinhos = 0.12;
+            const double precoBroas = 1.50;
 
             Console.WriteLine("Digite a quantidade de paozinhos vendidos no dia:");
             double quantidadePaozinhos = Convert.ToDouble(Console.ReadLine());

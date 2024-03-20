@@ -6,7 +6,7 @@ namespace Exercicio06.ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Qual temperatura você deseja converter de ºC para graus ºF?");
+            Console.WriteLine("Qual temperatura você deseja converter de ºC para ºF?");
             double grausCelsius = Convert.ToDouble(Console.ReadLine());
 
             double grausFahrenheit = 9 / 5 * (grausCelsius + 32);

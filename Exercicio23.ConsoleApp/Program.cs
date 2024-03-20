@@ -8,11 +8,11 @@ namespace Exercicio23.ConsoleApp
         {
             int soma = 0;
             
-            for (int i = 1; i < 500; i++)
+            for (int i = 1; i < 500; i++) // ++ incrementa 1
             {
                 if (i % 3 == 0 && i % 2 != 0)
                 {
-                    soma = soma + i;
+                    soma = soma + i; // ou soma += i
                 }
             }
             Console.Write("A soma total dos números ímpares, múltiplos de três, entre 1 e 500 é: " + soma);

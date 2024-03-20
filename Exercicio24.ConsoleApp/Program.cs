@@ -9,7 +9,7 @@
 
             for (int i = 0; i <= 10; i++) 
             { 
-                Console.WriteLine(i + " X " + n + " = " + (i * n));
+                Console.WriteLine(i + " X " + n + " = " + (i * n)); // ou ("{0} x {1} = {2}", i, n, resultado);
             }
         }
     }

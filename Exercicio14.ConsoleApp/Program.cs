@@ -6,7 +6,7 @@ namespace Exercicio14.ConsoleApp
     {
         static void Main(string[] args)
         {
-            int anoCompleto = 365;
+            const int anoCompleto = 365;
 
             Console.WriteLine("Olá, qual o seu nome?");
             string nome = Console.ReadLine();

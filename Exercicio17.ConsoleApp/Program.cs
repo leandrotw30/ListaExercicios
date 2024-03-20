@@ -15,11 +15,11 @@ namespace Exercicio17.ConsoleApp
 
             if (valorA + valorB < valorC)
             {
-                Console.WriteLine("A soma de A + B é menor que C");
+                Console.WriteLine("A soma de A e B é menor que C");
             }
             else
             {
-                Console.WriteLine("A soma de A + B é maior que C");
+                Console.WriteLine("A soma de A e B é maior que C");
             }
         }
     }
